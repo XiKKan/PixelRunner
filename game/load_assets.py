@@ -11,6 +11,8 @@ def load_animation_frames(folder_path, name):
             frames.append(image.load(frame_path))
     return frames
 
+BACKGROUND_IMAGE = image.load('assets/background/Background.png')
+FOREGROUND_IMAGE = image.load('assets/background/Foreground.png')
 
 sheet_frames = {
     "player": {"death": load_animation_frames('assets/player/death', 'Death'),
@@ -18,5 +20,4 @@ sheet_frames = {
                "jump": load_animation_frames('assets/player/jump', 'Jump')}
 }
 
-BACKGROUND_IMAGE = image.load('assets/background/Background.png')
-FOREGROUND_IMAGE = image.load('assets/background/Foreground.png')
+

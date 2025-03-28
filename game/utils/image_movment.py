@@ -1,5 +1,6 @@
 from game.load_assets import *
-from game.utils.math_numb import _get_scale_factor, _get_scale_factor_x_y, _get_speed
+from game.utils.math_numb import _get_scale_factor_x_y, _get_speed
+
 
 class ParallaxLayer:
     def __init__(self, image, speed):
