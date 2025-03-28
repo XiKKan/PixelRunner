@@ -58,7 +58,6 @@ class Player(sprite.Sprite):
                     self.rect.y += ((self.jump_count ** 2) / 2)
                 else:
                     self.rect.y -= ((self.jump_count ** 2) / 2)
-                    print(self.jump_count)
                 self.jump_count -= 1
             else:
                 self.is_jump = False
@@ -67,7 +66,6 @@ class Player(sprite.Sprite):
     def animation_for_action(self):
         if self.is_jump:
             self.change_sprite(self.animation["jump"])
-            print("space down")
         else:
             self.change_sprite(self.animation["run"])
 
