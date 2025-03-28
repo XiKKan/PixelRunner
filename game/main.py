@@ -32,18 +32,18 @@ def main():
         parallax.scale_image(current_size)
         parallax.update(delta_time, scaled)
         parallax.draw(screen)
+
         scale_factor = parallax.get_scale_factor()
+
         player_sprites.update()
         player.update_animation(scale_factor[0], scale_factor[1])
         player.rect.x = player.normalized_position_x * scale_factor[0]
+        player.jump()
         if not player.is_jump:
             player.rect.y = player.normalized_position_y * scale_factor[1]
-
         player_sprites.draw(screen)
-
-        player_sprites.draw(screen)
-        player.jump()
         player.change_track(delta_time)
+
         pygame.display.flip()
         clock.tick(FPS)
     pygame.quit()
